@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import { compose } from 'redux';
+import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import Spinner from '../layout/Spinner';
 
@@ -33,23 +33,25 @@ class Clients extends Component {
     if (clients) {
       return (
         <div>
-          <div className='row'>
-            <div className='col-md-6'>
+          <div className="row">
+            <div className="col-md-6">
               <h2>
-                <i className='fas fa-users' /> Clients
+                {' '}
+                <i className="fas fa-users" /> Clients{' '}
               </h2>
             </div>
-            <div className='col-md-6'>
-              <h5 className='text-right text-secondary'>
+            <div className="col-md-6">
+              <h5 className="text-right text-secondary">
                 Total Owed{' '}
-                <span className='text-primary'>
+                <span className="text-primary">
                   ${parseFloat(totalOwed).toFixed(2)}
                 </span>
               </h5>
             </div>
           </div>
-          <table className='table table-striped'>
-            <thead className='thead-inverse'>
+
+          <table className="table table-striped">
+            <thead className="thead-inverse">
               <tr>
                 <th>Name</th>
                 <th>Email</th>
@@ -68,9 +70,9 @@ class Clients extends Component {
                   <td>
                     <Link
                       to={`/client/${client.id}`}
-                      className='btn btn-secondary btn-sm'
+                      className="btn btn-secondary btn-sm"
                     >
-                      <i className='fas fa-arrow-circle-right' /> Details
+                      <i className="fas fa-arrow-circle-right" /> Details
                     </Link>
                   </td>
                 </tr>
